@@ -1,11 +1,11 @@
-<h1>Welcome!</h1>
-<p>Your email is <%= @user.email %></p>
+<h1>Welcome, <%= @user.username %></h1>
+
 <p><%= link_to "Log out", destroy_user_session_path, :method => :delete %></p>
 
 
-<h3>create a conversation</h3>
+<h3><%= link_to "create a conversation", new_conversation_path %></h3>
 
 <h4>OR</h4>
 
 
-<h3>Join a conversation</h3>
+<h3><%= link_to "Join a conversation", conversations_path %></h3>

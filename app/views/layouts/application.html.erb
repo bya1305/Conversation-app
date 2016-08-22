@@ -9,6 +9,9 @@
   </head>
 
   <body>
+    <% if current_user %>
+      <nav><h3>Chat app</h3></nav>
+    <% end %>
     <%= yield %>
   </body>
 </html>
