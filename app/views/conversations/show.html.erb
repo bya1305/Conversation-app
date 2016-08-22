@@ -1,2 +1,13 @@
 <%= @conversation.title %>
 <p><%= @conversation.category %></p>
+
+
+
+
+
+
+<% form_for ([@conversation, @message]) do |f| %>
+  <%= f.text_area :content, placeholder: "Add a new message..." %>
+  <br>
+  <%= f.submit %>
+<% end %>

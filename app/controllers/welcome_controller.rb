@@ -7,5 +7,6 @@ class WelcomeController < ApplicationController
 
   def home
     @user = current_user
+    @conversations = Conversation.all
   end
 end

@@ -8,7 +8,9 @@ class ConversationsController < ApplicationController
   end
 
   def create
-    @conversation = Conversation.create(conversation_params)
+    @conversation = Conversation.new(conversation_params)
+    @conversation.user_id = current_user.id
+    @conversation.save
     if @conversation.save
       redirect_to conversation_path(@conversation)
     else
@@ -18,6 +20,7 @@ class ConversationsController < ApplicationController
 
   def show
     @conversation = Conversation.find(params[:id])
+    @message = Message.new
   end
 
 
