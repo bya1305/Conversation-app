@@ -1,5 +1,6 @@
 class ConversationsController < ApplicationController
   def index
+    #shows all conversations that have been created by all users
     @conversations = Conversation.all
   end
 
@@ -21,6 +22,16 @@ class ConversationsController < ApplicationController
   def show
     @conversation = Conversation.find(params[:id])
     @message = Message.new
+  end
+
+  def edit
+    @conversation = Conversation.find(params[:id])
+  end
+
+  def update
+    @conversation = Conversation.find(params[:id])
+    @conversation.update(conversation_params)
+    redirect_to root_path
   end
 
   def destroy
