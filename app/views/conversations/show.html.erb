@@ -2,21 +2,19 @@
 <p><%= @conversation.category %></p>
 
 
-
+<!-- lists all the messages belonging to specific conversation -->
 <ul>
   <% @conversation.messages.each do |message| %>
     <li><%= message.content %>
-      <!-- <% if message.user_id == current_user.id %>
-        <%= link_to "delete", conversation_message_path(message.id), method: :delete %>
-      <% end %> -->
+      <% if message.user_id == current_user.id %>
+        <%= link_to "delete", conversation_message_path(@conversation, message), method: :delete %>
+      <% end %>
     </li>
   <% end %>
 </ul>
 
 
-
+<!-- form to add a message while in conversation -->
 <%= form_for ([@conversation, @message]) do |f| %>
-  <%= f.text_area :content, placeholder: "Add a new message..." %>
-  <br>
-  <%= f.submit %>
+  <%= f.text_field :content, placeholder: "Add a new message..." %>
 <% end %>

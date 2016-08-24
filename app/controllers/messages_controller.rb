@@ -13,7 +13,11 @@ class MessagesController < ApplicationController
   end
 
   def destroy
-    raise params.inspect
+    @conversation = Conversation.find(params[:conversation_id])
+    @messages = @conversation.messages
+    @message = @messages.find(params[:id])
+    @message.destroy
+    redirect_to @conversation
   end
 
   private
