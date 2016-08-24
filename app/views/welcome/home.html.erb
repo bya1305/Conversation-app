@@ -1,20 +1,22 @@
 <h1>Welcome, <%= @user.username %></h1>
-<%= @user.email %>
-<p><%= link_to "Log out", destroy_user_session_path, :method => :delete %></p>
-<h1>Conversations You've Created</h1>
-<% @conversations.each do |f| %>
-  <% if f.user_id == current_user.id %>
-    <div>
-      <p><%= link_to f.title, conversation_path(f) %>
-        <%= link_to "edit", edit_conversation_path(f) %>
-        <%= link_to "delete", conversation_path(f), method: :delete %></p>
-    </div>
+<section>
+  <h1>Conversations You've Created</h1>
+  <% @conversations.each do |f| %>
+    <% if f.user_id == current_user.id %>
+      <div>
+        <p><%= link_to f.title, conversation_path(f) %>
+          <%= link_to "edit", edit_conversation_path(f) %>
+          <%= link_to "delete", conversation_path(f), method: :delete %></p>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
+</section>
 
-<h3><%= link_to "create a conversation", new_conversation_path %></h3>
+<section id="create_or_join">
+  <h3><%= link_to "create a conversation", new_conversation_path %></h3>
 
-<h4>OR</h4>
+  <h4>OR</h4>
 
 
-<h3><%= link_to "Join a conversation", conversations_path %></h3>
+  <h3><%= link_to "Join a conversation", conversations_path %></h3>
+</section>

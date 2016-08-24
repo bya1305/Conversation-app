@@ -1,0 +1,43 @@
+/*======= Landing Page =======*/
+
+body.landing-page {
+  background-image: url("landing2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.jumbotron {
+  margin-top: 200px;
+  min-height: 350px;
+  background-color: #7e7e7f;
+  text-align: center;
+}
+
+.jumbotron a {
+  color: #1d668a;
+  margin: 0 10px;
+  font-size: 30px;
+}
+
+/*======== Sign up and login pages =======*/
+
+.signup_in {
+  margin: 30%;
+  padding-left: 10%;
+  border: 2px solid grey;
+  padding-bottom: 15px;
+  background-color:white;
+}
+
+body#signup_in {
+  background-color: black;
+}
+
+/*======= Navbar =======*/
+
+.navbar-right {
+  margin-right: 5px;
+}
+p.navbar-brand {
+  margin-right: 35px;
+}
