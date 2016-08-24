@@ -1,3 +1,7 @@
+body {
+  background-color: #14bcdd;
+}
+
 /*======= Landing Page =======*/
 
 body.landing-page {
@@ -30,10 +34,18 @@ body.landing-page {
 }
 
 body#signup_in {
-  background-color: black;
+  background-color: #14bcdd;
 }
 
 /*======= Navbar =======*/
+.navbar {
+  background-color: grey;
+  color: white;
+}
+
+.navbar.navbar-default li a, .navbar.navbar-default p {
+  color: white;
+}
 
 .navbar-right {
   margin-right: 5px;
