@@ -12,6 +12,10 @@ class MessagesController < ApplicationController
     end
   end
 
+  def destroy
+    raise params.inspect
+  end
+
   private
 
     def message_params

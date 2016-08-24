@@ -1,5 +1,5 @@
 <% @conversations.each do |c| %>
   <div class="convo">
-    <%= c.title %>
+    <%= link_to c.title, conversation_path(c) %>
   </div>
 <% end %>
