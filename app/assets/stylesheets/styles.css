@@ -39,12 +39,12 @@ body#signup_in {
 
 /*======= Navbar =======*/
 .navbar {
-  background-color: grey;
+  background-color: #dcdcdc;
   color: white;
 }
 
-.navbar.navbar-default li a, .navbar.navbar-default p {
-  color: white;
+.navbar-brand {
+  font-weight: bold;
 }
 
 .navbar-right {
@@ -52,4 +52,36 @@ body#signup_in {
 }
 p.navbar-brand {
   margin-right: 35px;
+}
+
+/*====== User home page =======*/
+
+.welcomeuser {
+  text-align:center;
+  margin-top: 50px;
+  font-size: 3em;
+}
+
+.userhome1 {
+  text-align: center;
+}
+
+.userhome2 {
+  clear:both;
+  text-align: center;
+}
+.userhomecont {
+  background-color: white;
+  margin-top: 5%;
+  min-height: 400px;
+}
+
+.link-btn1, .link-btn {
+  margin-left: 80px;
+  color: #14bcdd;
+}
+
+.link-title {
+  color: #14bcdd;
+  font-size: 30px;
 }

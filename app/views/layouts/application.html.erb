@@ -28,7 +28,7 @@
             <li><%= link_to "New Conversation", new_conversation_path %></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li class="lia"><%= link_to "Logged in as " + current_user.username, home_path %></li>
+            <li class="lia"><%= link_to "Logged in as " + current_user.username + "!", home_path %></li>
             <li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
           </ul>
         </div><!--/.nav-collapse -->
