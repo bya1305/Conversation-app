@@ -129,3 +129,34 @@ p.navbar-brand {
   width: 300px;
   height: 35px;
 }
+
+/*====== New conversation form page =======*/
+
+.convoform {
+  margin-left: 40%;
+  margin-top: 10%;
+}
+
+/*======= Conversations index page =========*/
+.convoindex {
+  background-color: white;
+  margin-top: 10%;
+  min-height: 40vh;
+}
+
+.convo {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 25px;
+  text-decoration: underline;
+  color: #337abd;
+}
+
+.convo p {
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.messagecount {
+  font-size: 15px;
+}

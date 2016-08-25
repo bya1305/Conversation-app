@@ -1,5 +1,7 @@
-<% @conversations.each do |c| %>
-  <div class="convo">
-    <%= link_to c.title, conversation_path(c) %>
-  </div>
-<% end %>
+<div class="container convoindex">
+  <% @conversations.each do |c| %>
+    <div class="convo">
+      <%= link_to c.title, conversation_path(c) %><p><%= c.messages.count %> messages</p>
+    </div>
+  <% end %>
+</div>
