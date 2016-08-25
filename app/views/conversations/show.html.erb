@@ -1,20 +1,34 @@
-<%= @conversation.title %>
-<p><%= @conversation.category %></p>
+<div class="container messageformcontainer">
+  <h1> Topic: <%= @conversation.title %></h1>
+  <h4> Category: <%= @conversation.category %></h4>
 
-
-<!-- lists all the messages belonging to specific conversation -->
-<ul>
-  <% @conversation.messages.each do |message| %>
-    <li><%= message.content %>
-      <% if message.user_id == current_user.id %>
-        <%= link_to "delete", conversation_message_path(@conversation, message), method: :delete %>
+  <div id="messages">
+    <!-- lists all the messages belonging to specific conversation -->
+    <ul>
+      <% @conversation.messages.each do |message| %>
+        <li class="indmessage"> <%= message.user.username %> said: <br>
+          <%= message.content %>
+          <% if message.user_id == current_user.id %>
+            <%= link_to "delete", conversation_message_path(@conversation, message), method: :delete, class: "messagedelete" %>
+          <% end %>
+        </li>
       <% end %>
-    </li>
-  <% end %>
-</ul>
+    </ul>
+  </div>    <!---end of messages div-->
 
 
-<!-- form to add a message while in conversation -->
-<%= form_for ([@conversation, @message]) do |f| %>
-  <%= f.text_field :content, placeholder: "Add a new message..." %>
-<% end %>
+  <div class="messageform">
+    <!-- form to add a message while in conversation -->
+    <%= form_for ([@conversation, @message]) do |f| %>
+      <%= f.text_field :content, placeholder: "Add a new message..." %>
+    <% end %>
+  </div> <!-- end of message form -->
+</div>  <!-- end of container -->
+
+<!-- Need to find a better way to work this, not sure how it will look with multiple people logged on -->
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>$("html, body").animate({ scrollTop: $(document).height() }, "fast");
+  $("#messages").animate({ scrollTop: $(document).height() }, "fast");
+</script>

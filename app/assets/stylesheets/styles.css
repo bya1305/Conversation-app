@@ -76,12 +76,56 @@ p.navbar-brand {
   min-height: 400px;
 }
 
-.link-btn1, .link-btn {
+.link-btn1 {
   margin-left: 80px;
+  margin-right: 5px;
+  color: #14bcdd;
+}
+
+.link-btn {
   color: #14bcdd;
 }
 
 .link-title {
   color: #14bcdd;
   font-size: 30px;
+}
+
+/*======= Conversation show page =======*/
+.messageformcontainer {
+  margin-top: 5%;
+  min-height:85vh;
+  background-color: white;
+}
+.messageform {
+  bottom: 10px;
+  margin: 0 auto;
+}
+
+#messages {
+  max-height: 60vh;
+  overflow: scroll;
+  text-align: left;
+  padding: 30px 15px;
+}
+.indmessage {
+  border: 1px solid black;
+  list-style-type: none;
+  margin: 15px 0;
+  padding: 10px 0 15px 10px;
+}
+
+.messagedelete {
+  float: right
+}
+
+.messageform form {
+  margin-top: 5%;
+  margin-left: 40%;
+}
+
+.messageform form input {
+  border: 2px solid black;
+  width: 300px;
+  height: 35px;
 }
